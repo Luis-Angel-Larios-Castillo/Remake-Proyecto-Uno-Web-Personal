@@ -3,10 +3,16 @@
 
 {% block title %}Portada{% endblock %}
 
+
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+
+{% block headers %}
+<h1>Luis Angel Larios</h1>
+<span class="subheading">Ingeniero en Tecnologias de la Información</span>
+{% endblock %}
+
+
 {% block content %}
-
-<H2>Portada</H2>
-<P>Esto es la portada</P>
-
 {% endblock %}
     

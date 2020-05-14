@@ -49,14 +49,16 @@
     </nav>
 
     <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('{% static 'core/img/home-bg.jpg' %}')">
+    <header class="masthead" style="background-image: url('{% block background %} {% endblock %}')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Luis Angel Larios</h1>
-              <span class="subheading">Ingeniero en Tecnologias de la Información</span>
+
+                    {% block headers %} {% endblock %}
+
+              
             </div>
           </div>
         </div>
@@ -65,8 +67,12 @@
 
    <!--Contenido-->
 
-   {% block content %} {% endblock %}
+<div class="container">
+       {% block content %} {% endblock %}
+      </div>  
+    </div>
 
+{% if request.path !=  "/" %}<hr>{% endif %}
     <!-- Pié de página -->
     <footer>
       <div class="container">
